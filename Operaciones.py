@@ -23,7 +23,6 @@ class OperacionesPolinomios:
             exp_resultado = exp_dividendo - exp_divisor
             coef_resultado = coef_dividendo / coef_divisor
             resultado[exp_resultado] = coef_resultado
-            # Resta el término correspondiente
             for exp, coef in p2.terminos.items():
                 exp_actual = exp + exp_resultado
                 dividendo[exp_actual] = dividendo.get(exp_actual, 0) - coef * coef_resultado
